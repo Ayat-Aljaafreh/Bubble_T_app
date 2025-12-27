@@ -1,7 +1,7 @@
 import streamlit as st
 import math
 
-st.title("Bubble Point Calculation App")
+st.title("Bubble T Calculation")
 
 # ===================== Utility Functions =====================
 
