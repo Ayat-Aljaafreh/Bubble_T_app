@@ -302,7 +302,7 @@ calc_type = st.radio("Choose Calculation Type:", ["Dew Point"])
 import streamlit as st
 
 # عدد المكونات
-n = st.sidebar.number_input("Number of components:", min_value=1, value=2, format="%.8f")
+n = st.sidebar.number_input("Number of components:", min_value=1, value=2)
 
 nonideal_liq = st.sidebar.radio("Is liquid phase non-ideal?", ["Yes", "No"]) == "Yes"
 nonideal_gas = st.sidebar.radio("Is gas phase non-ideal?", ["Yes", "No"]) == "Yes"
@@ -351,7 +351,7 @@ from dew_T import convert_pressure_to_kpa         #ارجعي لهاي النق�
 P = convert_pressure_to_kpa(Ptot, P_unit_Ant)
 
 # الرقم الثابت للمكون
-k_index = st.sidebar.number_input(f"Fixed component number (1-{n})", min_value=1, max_value=n, value=1, format="%.8f") - 1
+k_index = st.sidebar.number_input(f"Fixed component number (1-{n})", min_value=1, max_value=n, value=1) - 1
 
 # النسب المولية
 y = [st.sidebar.number_input(f"y{i+1}", min_value=0.0, max_value=1.0, value=0.5, format="%.8f") for i in range(n)]
